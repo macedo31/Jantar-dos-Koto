@@ -64,7 +64,7 @@
 </style>
 </head>
 <body>
-  <h1>Jantar dos Papais</h1>
+  <h1>Jantar dos Koto</h1>
 
   <section>
     <h2>Entradas</h2>
@@ -87,7 +87,22 @@
     <label><input type="radio" name="bebida" value="Sucos em geral" /> Sucos em geral</label>
   </section>
 
-  <button id="submitBtn">Enviar pedido à cozinha</button>
+    <button id="submitBtn">Enviar pedido à cozinha</button>
+
+  <div id="confirmation">Pedido Recebido</div>
+
+  <script>
+    const btn = document.getElementById('submitBtn');
+    const confirmation = document.getElementById('confirmation');
+
+    btn.addEventListener('click', () => {
+      confirmation.style.display = 'block';
+      setTimeout(() => {
+        confirmation.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+
 
   <div id="confirmation">Pedido enviado!</div>
 
